@@ -52,6 +52,12 @@ export default function Rooms() {
     refetch,
   } = useRooms({ initialPage: 1, limit: 10 });
 
+  const customDateRangeInvalid =
+    dateRangeKind === "custom" &&
+    customFrom &&
+    customTo &&
+    new Date(customFrom) >= new Date(customTo);
+
   const { dateRangeFrom, dateRangeTo } = useMemo(() => {
     const now = new Date();
     if (dateRangeKind === "today") {
@@ -83,7 +89,12 @@ export default function Rooms() {
         dateRangeTo: end.toISOString(),
       };
     }
-    if (customFrom && customTo) {
+    if (
+      dateRangeKind === "custom" &&
+      customFrom &&
+      customTo &&
+      new Date(customFrom) < new Date(customTo)
+    ) {
       return { dateRangeFrom: customFrom, dateRangeTo: customTo };
     }
     const start = new Date(now);
@@ -540,15 +551,30 @@ export default function Rooms() {
                   type="datetime-local"
                   value={customFrom}
                   onChange={(e) => setCustomFrom(e.target.value)}
-                  className="border border-week-first rounded-md px-2 py-1 text-sm"
+                  aria-invalid={customDateRangeInvalid}
+                  className={`border rounded-md px-2 py-1 text-sm ${
+                    customDateRangeInvalid
+                      ? "border-red-500 dark:border-red-400"
+                      : "border-week-first"
+                  }`}
                 />
                 <span className="text-gray-500">to</span>
                 <input
                   type="datetime-local"
                   value={customTo}
                   onChange={(e) => setCustomTo(e.target.value)}
-                  className="border border-week-first rounded-md px-2 py-1 text-sm"
+                  aria-invalid={customDateRangeInvalid}
+                  className={`border rounded-md px-2 py-1 text-sm ${
+                    customDateRangeInvalid
+                      ? "border-red-500 dark:border-red-400"
+                      : "border-week-first"
+                  }`}
                 />
+                {customDateRangeInvalid && (
+                  <p className="w-full text-sm text-red-600 dark:text-red-400">
+                    Start date must be before end date.
+                  </p>
+                )}
               </div>
             )}
           </div>
@@ -589,7 +615,7 @@ export default function Rooms() {
                   type="button"
                   onClick={handleConfirmDelete}
                   disabled={isDeleting}
-                  className="px-3 py-2 rounded-md bg-red-500 text-white hover:bg-red-600 disabled:opacity-50"
+                  className="px-3 py-2 rounded-md !bg-calendar-ring text-white disabled:opacity-50"
                 >
                   {isDeleting ? "Deleting…" : "Delete"}
                 </button>
