@@ -551,7 +551,7 @@ export default function Rooms() {
                   type="datetime-local"
                   value={customFrom}
                   onChange={(e) => setCustomFrom(e.target.value)}
-                  aria-invalid={customDateRangeInvalid}
+                  aria-invalid={!!customDateRangeInvalid}
                   className={`border rounded-md px-2 py-1 text-sm ${
                     customDateRangeInvalid
                       ? "border-red-500 dark:border-red-400"
@@ -563,7 +563,7 @@ export default function Rooms() {
                   type="datetime-local"
                   value={customTo}
                   onChange={(e) => setCustomTo(e.target.value)}
-                  aria-invalid={customDateRangeInvalid}
+                  aria-invalid={!!customDateRangeInvalid}
                   className={`border rounded-md px-2 py-1 text-sm ${
                     customDateRangeInvalid
                       ? "border-red-500 dark:border-red-400"
