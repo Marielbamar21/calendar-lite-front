@@ -1,9 +1,4 @@
-import {
-  useCallback,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { AuthContext } from "./authContext";
 import {
   getToken,
@@ -69,11 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setTokenState(newToken);
   }, []);
   const register = useCallback(async (userData: RegisterCredentials) => {
-    const res = await apiRegister(userData);
-    if (res?.token) {
-      saveToken(res.token);
-      setTokenState(res.token);
-    }
+    await apiRegister(userData);
   }, []);
 
   const logout = useCallback(() => {
