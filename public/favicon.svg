@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Nube izquierda superior -->
+  <ellipse cx="8" cy="12" rx="4" ry="3" fill="#E0F2FE"/>
+  <ellipse cx="6" cy="13" rx="3" ry="2.5" fill="#E0F2FE"/>
+  <ellipse cx="10" cy="13" rx="3.5" ry="2.5" fill="#E0F2FE"/>
+  
+  <!-- Nube derecha superior -->
+  <ellipse cx="24" cy="11" rx="4.5" ry="3.5" fill="#E0F2FE"/>
+  <ellipse cx="21" cy="13" rx="3.5" ry="2.8" fill="#E0F2FE"/>
+  <ellipse cx="27" cy="13" rx="3.8" ry="2.8" fill="#E0F2FE"/>
+  
+  <!-- Nube superior central -->
+  <ellipse cx="16" cy="7" rx="5" ry="3.5" fill="#DBEAFE"/>
+  <ellipse cx="13" cy="8" rx="3.5" ry="2.5" fill="#DBEAFE"/>
+  <ellipse cx="19" cy="8" rx="4" ry="2.5" fill="#DBEAFE"/>
+  
+  <!-- Calendario -->
+  <rect x="10" y="13" width="12" height="14" rx="1.5" fill="#FFFFFF" stroke="#3B82F6" stroke-width="1"/>
+  
+  <!-- Header del calendario -->
+  <rect x="10" y="13" width="12" height="3.5" rx="1.5" fill="#3B82F6"/>
+  <rect x="10" y="15.5" width="12" height="1" fill="#3B82F6"/>
+  
+  <!-- Anillas -->
+  <circle cx="13" cy="13" r="0.8" fill="#1E40AF"/>
+  <circle cx="16" cy="13" r="0.8" fill="#1E40AF"/>
+  <circle cx="19" cy="13" r="0.8" fill="#1E40AF"/>
+  
+  <!-- Grid de días simplificado -->
+  <rect x="11.5" y="18" width="1.5" height="1.5" rx="0.3" fill="#93C5FD"/>
+  <rect x="13.5" y="18" width="1.5" height="1.5" rx="0.3" fill="#93C5FD"/>
+  <rect x="15.5" y="18" width="1.5" height="1.5" rx="0.3" fill="#3B82F6"/>
+  <rect x="17.5" y="18" width="1.5" height="1.5" rx="0.3" fill="#93C5FD"/>
+  <rect x="19.5" y="18" width="1.5" height="1.5" rx="0.3" fill="#93C5FD"/>
+  
+  <rect x="11.5" y="20" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="13.5" y="20" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="15.5" y="20" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="17.5" y="20" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="19.5" y="20" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  
+  <rect x="11.5" y="22" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="13.5" y="22" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="15.5" y="22" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="17.5" y="22" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="19.5" y="22" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  
+  <rect x="11.5" y="24" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="13.5" y="24" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  <rect x="15.5" y="24" width="1.5" height="1.5" rx="0.3" fill="#BFDBFE"/>
+  
+  <!-- Nubes inferiores -->
+  <ellipse cx="9" cy="25" rx="3.5" ry="2.5" fill="#F0F9FF"/>
+  <ellipse cx="7" cy="26" rx="2.5" ry="2" fill="#F0F9FF"/>
+  
+  <ellipse cx="23" cy="26" rx="4" ry="2.8" fill="#F0F9FF"/>
+  <ellipse cx="26" cy="27" rx="3" ry="2.2" fill="#F0F9FF"/>
+</svg>
