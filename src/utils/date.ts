@@ -9,5 +9,6 @@ export function formatDateTime(dateInput: string | Date | null | undefined): str
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "UTC",
   }).format(date);
 }
