@@ -31,7 +31,6 @@ export default function Register() {
     setLoading(true);
     const credentials = {
       name: data.name,
-      fullname: data.fullname,
       username: data.username,
       email: data.email,
       password: data.password,
@@ -76,15 +75,6 @@ export default function Register() {
           />
           {errors.name && (
             <p className="text-sm text-red-600">{errors.name.message}</p>
-          )}
-          <input
-            type="text"
-            placeholder="Full name"
-            className={classInput}
-            {...register("fullname")}
-          />
-          {errors.fullname && (
-            <p className="text-sm text-red-600">{errors.fullname.message}</p>
           )}
           <input
             type="text"

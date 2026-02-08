@@ -41,14 +41,12 @@ export interface LoginResponse {
 export interface RegisterResponse {
   token?: string;
   id?: string;
-  fullname?: string;
   username?: string;
   email?: string;
 }
 
 export interface RegisterCredentials {
   name: string;
-  fullname: string;
   username: string;
   email: string;
   password: string;
@@ -77,7 +75,6 @@ export async function register(
 ): Promise<RegisterResponse> {
   const body = {
     name: dataUser.name,
-    fullname: dataUser.fullname,
     username: dataUser.username,
     email: dataUser.email,
     password: dataUser.password,
